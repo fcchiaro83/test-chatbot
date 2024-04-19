@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Start page</title>
+  </head>
+  <body>
+    <h2>Chat Widget</h2>
+
+    <!-- Embedding the chat widget -->
+    <script src="https://github.com/Cognigy/WebchatWidget/releases/latest/download/webchat.js"></script>
+    <script>
+      initWebchat(
+        "https://endpoint-yousee.cognigy.cloud/fbd4e0e3223cbbbce1d64a41e1e360c3e727d19df99c83523595a131f05f69ef",
+
+        {
+          sessionId: "TestSessionId", // Unique identifier for the session. Can be used for analytics.
+          userId: "TestUserId",
+          channel: "Handover-playground", // Name of chat client. Useful for analytics.
+          settings: {
+            inputPlaceholder: "Skriv din besked her...",
+            awaitEndpointConfig: true, // This setting is a necessary for the settings maintenance and businessHours when set from the Endpoint Editor in the Cognigy dashboard.
+            agentAvatarUrl: "https://eesy.dk/favicon-32x32.png?v=00aaPj3nplyx",
+            // designTemplate: 2, // Doesn't work when using it inside this test page. Wonder why?
+            disableBranding: true,
+            disableHtmlInput: true,
+            enableTypingIndicator: true,
+            enableUnreadMessageBadge: true,
+            enableUnreadMessagePreview: true,
+            engagementMessageText: "Hej, hvordan kan jeg hjælpe dig?",
+            focusInputAfterPostback: true,
+            forceWebsockets: true,
+          },
+        }
+      );
+    </script>
+    <a href="chatbot-on-webpage-subpage.html">Subpage</a>
+  </body>
+</html>
