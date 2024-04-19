@@ -3,14 +3,31 @@
   <head>
     <title>Subpage</title>
   </head>
+  
   <style>
-      /* Style for responsive layout */
+      /* Base styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        font-size: 24px;
+        margin: 20px 0;
+      }
+      /* Chat widget container */
+      .chat-widget {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      /* Responsive styles for mobile devices */
       @media only screen and (max-width: 600px) {
-        body {
-          font-size: 14px;
-        }
         h2 {
           font-size: 20px;
+        }
+        .chat-widget {
+          padding: 10px;
         }
       }
     </style>
