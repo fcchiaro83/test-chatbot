@@ -41,7 +41,7 @@
         "https://endpoint-yousee.cognigy.cloud/a5d6b4ef463d63f7f357b5bdc43d4623758e5c96cf542f8eb4bb4cd0bbd61869",
 
         {
-          // sessionId: "TestSessionId", // Unique identifier for the session. Can be used for analytics.
+          sessionId: `session-${Date.now() * Math.random()}`, // Unique identifier for the session. Can be used for analytics.
           userId: "TestUserId",
           channel: "Handover-playground", // Name of chat client. Useful for analytics.
           settings: {
